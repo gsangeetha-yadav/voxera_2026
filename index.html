@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#edf3e9">
+<title>Voxera — Healthcare without barriers</title>
+<style>
+:root{--sage:#a6bd9f;--sage-dark:#55734f;--sage-deep:#31583c;--pale:#edf3e9;--cream:#fafbf8;--ink:#26352a;--muted:#718075;--line:#e3eae0;--white:#fff;--red:#c65353;--shadow:0 12px 35px rgba(49,88,60,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{min-height:100vh}.topbar{height:76px;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,72px);position:sticky;top:0;z-index:10}.brand{display:flex;align-items:center;gap:11px;font-weight:850;font-size:22px;letter-spacing:.5px;color:var(--sage-deep)}.logo{width:39px;height:39px;border-radius:13px;background:var(--sage-dark);display:grid;place-items:center;color:white;font-size:22px}.brand small{display:block;font-size:10px;font-weight:600;letter-spacing:1.4px;color:var(--muted);margin-top:-4px}.top-actions{display:flex;gap:10px;align-items:center}.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:9px 14px;color:var(--ink)}.btn{border:0;border-radius:12px;padding:11px 17px;background:var(--sage-dark);color:white;font-weight:700;transition:.2s}.btn:hover{background:var(--sage-deep);transform:translateY(-1px)}.btn.secondary{background:#edf3e9;color:var(--sage-deep)}.btn.ghost{background:white;color:var(--sage-deep);border:1px solid var(--line)}.btn.danger{background:#b84d4d}.layout{max-width:1440px;margin:auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;padding:28px clamp(16px,4vw,55px)}.sidebar{align-self:start;position:sticky;top:98px;background:white;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:var(--shadow)}.side-label{font-size:10px;letter-spacing:1.5px;font-weight:800;color:#98a397;padding:12px 10px 8px}.nav-btn{width:100%;display:flex;align-items:center;gap:12px;border:0;background:transparent;color:#5e6d61;text-align:left;padding:11px 12px;border-radius:11px;margin:2px 0;font-weight:650}.nav-btn:hover,.nav-btn.active{background:var(--pale);color:var(--sage-deep)}.nav-btn .ico{width:23px;text-align:center;font-size:18px}.sidebar-note{margin-top:18px;padding:14px;background:#f7faf5;border-radius:14px;color:var(--muted);font-size:12px}.main{min-width:0}.page{display:none;animation:fade .25s ease}.page.active{display:block}@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}.hero{background:linear-gradient(120deg,#e8f0e5,#f4f7f0);border-radius:24px;padding:clamp(25px,5vw,52px);display:grid;grid-template-columns:1.35fr .65fr;gap:20px;align-items:center;overflow:hidden;position:relative}.eyebrow{color:var(--sage-dark);font-size:11px;font-weight:850;letter-spacing:1.8px;text-transform:uppercase}.hero h1{font-size:clamp(34px,5vw,58px);line-height:1.05;letter-spacing:-2px;margin:12px 0;color:#31583c}.hero p{max-width:560px;color:#657568;font-size:16px}.hero-art{font-size:120px;text-align:center;filter:drop-shadow(0 12px 10px #7d9c7833)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:30px 0 15px}.section-head h2{margin:0;font-size:23px;letter-spacing:-.5px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.feature{background:white;border:1px solid var(--line);border-radius:18px;padding:19px;text-align:left;box-shadow:0 4px 16px #385c3d08;transition:.2s;min-height:155px;color:var(--ink)}.feature:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#c8d8c3}.feature .bigico{width:43px;height:43px;border-radius:14px;background:var(--pale);display:grid;place-items:center;font-size:22px;margin-bottom:13px}.feature strong{display:block;font-size:15px}.feature span:last-child{display:block;color:var(--muted);font-size:12px;margin-top:4px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:18px;padding:21px;box-shadow:0 4px 16px #385c3d08}.card h3{margin:0 0 5px;font-size:18px}.card p{margin:5px 0;color:var(--muted)}.stat{font-size:28px;font-weight:800;color:var(--sage-deep)}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:750;color:#536256}.field input,.field select,.field textarea{width:100%;border:1px solid #dfe7dc;border-radius:11px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--sage-dark);box-shadow:0 0 0 3px #a6bd9f35}.field textarea{min-height:90px;resize:vertical}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:15px}.notice{padding:12px 14px;border-radius:12px;background:#f2f6ef;color:#526a54;font-size:13px;margin:14px 0}.notice.warn{background:#fff6e8;color:#88652f}.list{display:grid;gap:10px;margin-top:14px}.list-item{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:13px;border:1px solid var(--line);border-radius:13px;background:#fff}.tag{font-size:11px;font-weight:750;padding:5px 9px;border-radius:999px;background:var(--pale);color:var(--sage-deep)}.tag.red{background:#fff0ef;color:#a74444}.empty{padding:25px;text-align:center;color:var(--muted);border:1px dashed #cfdccd;border-radius:14px}.chatbox{height:300px;overflow:auto;background:#f7faf5;border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:9px}.bubble{max-width:85%;padding:10px 13px;border-radius:14px;background:white;border:1px solid var(--line);align-self:flex-start}.bubble.mine{background:#e7f0e3;align-self:flex-end;border-color:#d5e4d0}.chat-send{display:flex;gap:8px;margin-top:10px}.chat-send input{flex:1;min-width:0;border:1px solid var(--line);border-radius:11px;padding:12px}.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.video-tile{border:1px solid var(--line);border-radius:15px;padding:17px;background:white}.video-tile .play{font-size:28px;background:var(--pale);width:48px;height:48px;display:grid;place-items:center;border-radius:14px}.footer{text-align:center;color:#93a094;font-size:12px;padding:30px}.mobile-menu{display:none}.toast{position:fixed;bottom:22px;right:22px;background:#294b32;color:white;padding:13px 18px;border-radius:12px;box-shadow:var(--shadow);z-index:30;opacity:0;transform:translateY(10px);transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:none}.modal-back{display:none;position:fixed;inset:0;background:#14201877;z-index:20;place-items:center;padding:20px}.modal-back.show{display:grid}.modal{max-width:470px;width:100%;background:white;border-radius:20px;padding:24px}.modal h3{margin-top:0}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.video-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.layout{display:block;padding:17px}.sidebar{display:none;position:fixed;z-index:15;top:76px;left:12px;right:12px;max-height:75vh;overflow:auto}.sidebar.open{display:block}.mobile-menu{display:inline-flex}.hero{grid-template-columns:1fr}.hero-art{display:none}.cards{grid-template-columns:1fr}.topbar{padding:0 15px}.top-actions .pill{display:none}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.video-grid{grid-template-columns:1fr}}
+@media(max-width:430px){.grid{grid-template-columns:1fr 1fr}.feature{padding:14px;min-height:145px}.hero h1{font-size:37px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><div class="logo">✚</div><div>VOXERA<small>HEALTHCARE WITHOUT BARRIERS</small></div></div>
+  <div class="top-actions"><span class="pill">🌿 Patient-first healthcare</span><button class="btn ghost mobile-menu" onclick="toggleMenu()">☰ Menu</button><button class="btn" onclick="showPage('dashboard')">My dashboard</button></div>
+</header>
+<div class="layout">
+<aside class="sidebar" id="sidebar">
+  <div class="side-label">MAIN MENU</div>
+  <button class="nav-btn active" data-page="home" onclick="showPage('home')"><span class="ico">⌂</span>Home</button>
+  <button class="nav-btn" data-page="dashboard" onclick="showPage('dashboard')"><span class="ico">▦</span>Dashboard</button>
+  <div class="side-label">HEALTHCARE SERVICES</div>
+  <button class="nav-btn" data-page="blood" onclick="showPage('blood')"><span class="ico">🩸</span>Blood donor network</button>
+  <button class="nav-btn" data-page="organ" onclick="showPage('organ')"><span class="ico">♡</span>Organ donor</button>
+  <button class="nav-btn" data-page="locker" onclick="showPage('locker')"><span class="ico">▤</span>Medical file storage</button>
+  <button class="nav-btn" data-page="ai" onclick="showPage('ai')"><span class="ico">✧</span>AI prescription help</button>
+  <button class="nav-btn" data-page="chat" onclick="showPage('chat')"><span class="ico">☏</span>Social chat</button>
+  <button class="nav-btn" data-page="voice" onclick="showPage('voice')"><span class="ico">🎙</span>Voice assistant</button>
+  <button class="nav-btn" data-page="tutorials" onclick="showPage('tutorials')"><span class="ico">▶</span>How to use</button>
+  <div class="side-label">PREFERENCES</div>
+  <div class="field"><label for="language">Website language</label><select id="language" onchange="setLanguage(this.value)"><option value="en">English</option><option value="hi">Hindi</option><option value="kn">Kannada</option></select></div>
+  <div class="sidebar-note">🔒 Demo mode: information entered here stays in this browser session only. Do not enter real medical or personal information.</div>
+</aside>
+<main class="main">
+<section class="page active" id="home">
+  <div class="hero"><div><div class="eyebrow">A smarter way to access support</div><h1 id="heroTitle">Healthcare<br>without barriers.</h1><p id="heroText">A connected place for donor support, medical records, prescription explanations and helpful healthcare guidance.</p><div class="actions"><button class="btn" onclick="showPage('blood')">Find blood donor →</button><button class="btn secondary" onclick="showPage('ai')">Explore AI assistant</button></div></div><div class="hero-art">🌿<br>✚</div></div>
+  <div class="section-head"><div><div class="eyebrow">Explore Voxera</div><h2>Everything you need, in one place</h2></div></div>
+  <div class="grid">
+    <button class="feature" onclick="showPage('blood')"><span class="bigico">🩸</span><strong>Blood donor network</strong><span>Submit a request and explore donor support.</span></button>
+    <button class="feature" onclick="showPage('organ')"><span class="bigico">♡</span><strong>Organ donor</strong><span>Learn about pledges and authorised processes.</span></button>
+    <button class="feature" onclick="showPage('locker')"><span class="bigico">📁</span><strong>Medical file storage</strong><span>Keep a local demo list of your files.</span></button>
+    <button class="feature" onclick="showPage('ai')"><span class="bigico">✧</span><strong>AI prescription assistance</strong><span>Learn what prescription terms mean.</span></button>
+    <button class="feature" onclick="showPage('chat')"><span class="bigico">💬</span><strong>Social chat</strong><span>Try a sample community conversation.</span></button>
+    <button class="feature" onclick="showPage('voice')"><span class="bigico">🎙</span><strong>Voice assistance</strong><span>Use browser speech features if supported.</span></button>
+    <button class="feature" onclick="showPage('tutorials')"><span class="bigico">▶</span><strong>How to use</strong><span>Explore short guides to Voxera features.</span></button>
+    <button class="feature" onclick="showPage('dashboard')"><span class="bigico">▦</span><strong>My dashboard</strong><span>See your demo activity and shortcuts.</span></button>
+  </div>
+  <div class="notice warn">Voxera is a demonstration project, not an emergency service or medical provider. For urgent care, contact a hospital or local emergency services.</div>
+</section>
+
+<section class="page" id="dashboard">
+  <div class="section-head"><div><div class="eyebrow">Your space</div><h2>Welcome to your dashboard</h2><p class="muted">A quick overview of your Voxera demo activity.</p></div></div>
+  <div class="grid">
+    <div class="card"><div class="muted">Blood requests created</div><div class="stat" id="bloodCount">0</div></div>
+    <div class="card"><div class="muted">Medical files added</div><div class="stat" id="fileCount">0</div></div>
+    <div class="card"><div class="muted">Community messages</div><div class="stat" id="messageCount">0</div></div>
+    <div class="card"><div class="muted">Organ pledge interest</div><div class="stat" id="pledgeCount">0</div></div>
+  </div>
+  <div class="section-head"><h2>Quick actions</h2></div><div class="actions"><button class="btn" onclick="showPage('blood')">Request blood</button><button class="btn secondary" onclick="showPage('locker')">Add a file</button><button class="btn ghost" onclick="showPage('tutorials')">View tutorials</button></div>
+</section>
+
+<section class="page" id="blood">
+  <div class="section-head"><div><div class="eyebrow">Blood donor network</div><h2>Blood support request</h2><p class="muted">Share the basic details needed to coordinate with a hospital or blood bank.</p></div><span class="tag red">Blood support</span></div>
+  <div class="cards">
+    <div class="card"><h3>Receiver request form</h3><p>Demo form only. Do not submit real patient information.</p>
+      <form id="bloodForm" class="form-grid">
+        <div class="field"><label>Patient name (demo)</label><input required id="patient" placeholder="Enter sample name"></div>
+        <div class="field"><label>Blood group</label><select required id="group"><option value="">Choose group</option><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select></div>
+        <div class="field"><label>Hospital / blood bank</label><input required id="hospital" placeholder="Hospital name"></div>
+        <div class="field"><label>City</label><input required id="city" placeholder="City"></div>
+        <div class="field"><label>Units requested (demo)</label><select id="units"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+        <div class="field"><label>Required date</label><input type="date" id="needed"></div>
+        <div class="field full"><label>Additional note</label><textarea id="bloodNote" placeholder="Add non-sensitive coordination notes"></textarea></div>
+        <div class="field full"><button class="btn" type="submit">Create demo request</button></div>
+      </form>
+    </div>
+    <div class="card"><h3>Important information</h3><p>Blood group alone does not establish transfusion compatibility. A hospital or authorised blood bank must verify the request, testing and suitability.</p><div class="notice">For urgent needs, contact the treating hospital or licensed blood bank directly. Voxera cannot guarantee donor availability.</div><h3>Sample donor directory</h3><p>Example entries to demonstrate how a directory could look. They are not real donors.</p><div class="list"><div class="list-item"><span>Sample donor 01 · O+</span><span class="tag">Example only</span></div><div class="list-item"><span>Sample donor 02 · A+</span><span class="tag">Example only</span></div></div></div>
+  </div>
+  <div class="section-head"><h2>Your demo requests</h2></div><div class="list" id="bloodRequests"><div class="empty">No demo requests yet.</div></div>
+</section>
+
+<section class="page" id="organ">
+  <div class="section-head"><div><div class="eyebrow">Organ donation awareness</div><h2>Give the gift of hope</h2><p class="muted">Learn about organ donation and how to express your interest through authorised channels.</p></div></div>
+  <div class="cards"><div class="card"><div class="bigico">♡</div><h3>Understand organ donation</h3><p>Organ donation is a regulated medical and legal process. Eligibility, consent, registration and allocation are handled by authorised organisations.</p><a href="https://notto.mohfw.gov.in/" target="_blank" rel="noopener" class="btn" style="display:inline-block;text-decoration:none;margin-top:10px">Visit India's NOTTO website ↗</a></div><div class="card"><h3>Express interest (demo)</h3><p>This records only a local demonstration choice, not an official donor registration or pledge.</p><div class="field"><label>Your interest</label><select id="organInterest"><option value="learning">I want to learn more</option><option value="pledge">I am interested in pledging</option></select></div><div class="actions"><button class="btn" onclick="savePledge()">Save demo interest</button></div><div id="pledgeResult" class="notice">No demo selection saved.</div></div></div>
+  <div class="notice warn">Voxera does not match organ donors with recipients or arrange organ transfers. Use official government-authorised channels.</div>
+</section>
+
+<section class="page" id="locker">
+  <div class="section-head"><div><div class="eyebrow">Your documents</div><h2>Medical file locker</h2><p class="muted">Add sample file names to preview the future medical records experience.</p></div></div>
+  <div class="cards"><div class="card"><h3>Add a document</h3><form id="fileForm"><div class="field"><label>Document title</label><input id="fileTitle" required placeholder="e.g. Blood test report (sample)"></div><div class="field" style="margin-top:12px"><label>Document category</label><select id="fileType"><option>Lab report</option><option>Prescription</option><option>Scan / imaging</option><option>Other</option></select></div><div class="field" style="margin-top:12px"><label>Select a demo file (optional)</label><input type="file" id="fileInput" accept=".pdf,.png,.jpg,.jpeg"></div><div class="actions"><button class="btn">Add to demo list</button></div></form></div><div class="card"><h3>Privacy matters</h3><p>This standalone demo does not upload or securely store your files. The selected file is not sent anywhere.</p><div class="notice warn">Do not use real medical records in this prototype. A production medical locker needs private cloud storage, authentication, encryption and access controls.</div></div></div>
+  <div class="section-head"><h2>My demo documents</h2></div><div class="list" id="fileList"><div class="empty">No demo documents added.</div></div>
+</section>
+
+<section class="page" id="ai">
+  <div class="section-head"><div><div class="eyebrow">Understand medical language</div><h2>AI prescription assistance</h2><p class="muted">A safe educational demo for common prescription terminology.</p></div><span class="tag">Educational demo</span></div>
+  <div class="cards"><div class="card"><h3>Ask about a term</h3><div class="field"><label>Choose a term</label><select id="medicalTerm"><option value="bd">BD</option><option value="tds">TDS</option><option value="od">OD</option><option value="after">After food</option><option value="before">Before food</option><option value="generic">Generic medicine name</option></select></div><div class="actions"><button class="btn" onclick="explainTerm()">Explain term</button></div><div id="termAnswer" class="notice">Choose a term to see a general explanation.</div></div><div class="card"><h3>Ask a question</h3><div class="field"><label>Your question</label><textarea id="aiQuestion" placeholder="Ask what a medical word means..."></textarea></div><div class="actions"><button class="btn secondary" onclick="answerQuestion()">Get demo guidance</button></div><div id="aiAnswer" class="notice">This demo provides limited gener
